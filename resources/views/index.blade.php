@@ -7,11 +7,11 @@
         <p> {{ $message }} </p>
     </div>
 @endif
+<div class="container">
+    <div class="row justify-content-center">
 <div class="row">
-    <div class="col-md-6">
         <h1>Johns Garage</h1>
-    </div>
-    <div class="col-md-6 text-right">
+    <div class="col-md-8">
         <a href="{{ action('CarController@create') }}" class="btn btn-primary"> Add Car</a>
     </div>
 </div>
@@ -20,11 +20,11 @@
         <tr>
             <th>No</th>
             <th>Car Registration Number</th>
-            <th>Car Maker</th>
-            <th>Customer Name</th>
-            <th>Customer Address</th>
-            <th>Customer Telephone</th>
-            <th>Car Mileage</th>
+            <th>Car's Make</th>
+            <th>Customer's Name</th>
+            <th>Customer's Address</th>
+            <th>Customer's Telephone</th>
+            <th>Car's Mileage</th>
         </tr>
     </thead>
     <tbody>
@@ -49,4 +49,6 @@
     </tr>  
     @endforeach  
 </table>
+</div>
+</div>
 @endsection
