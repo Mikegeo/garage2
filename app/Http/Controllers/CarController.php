@@ -70,7 +70,8 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cars = DB::select('select * from cars where id=?', [$id]);
+        return view('edit', ['cars' => $cars]);
     }
 
     /**
@@ -82,7 +83,16 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Cust_name = $request->get('Cust_Name');
+        $Cust_adr = $request->get('Cust_Adr');
+        $Cust_tele = $request->get('Cust_Tele');
+        $cars = DB::update('update cars set Cust_Name=?, Cust_Adr=?, Cust_Tele=? where id=?',[$Cust_name, $Cust_adr, $Cust_tele, $id]);
+        if($cars){
+            $red = redirect('cars')->with('success', 'Data has been updated!');
+        }else{
+            $red = redirect('cars/edit/' .$id)->with('danger', 'Error update please try again');
+        }
+        return $red;
     }
 
     /**
@@ -93,6 +103,8 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cars = DB::delete('delete from cars where id=?',[$id]);
+        $red = redirect('cars');
+        return $red;
     }
 }

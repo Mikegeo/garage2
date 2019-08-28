@@ -6,7 +6,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Add car</div>
-
                 <div class="card-body">
                 <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -44,7 +43,7 @@
             <button class="btn btn-primary" type="submit">Submit</button>
             </form>
           </div>  
-                </div>
+          </div>
             </div>
         </div>
     </div>
