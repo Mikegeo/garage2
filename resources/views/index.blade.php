@@ -45,6 +45,7 @@
     </tr>  
     @endforeach  
 </table>
+{{ $cars->links() }}
 </div>
 </div>
 @endsection

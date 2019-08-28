@@ -14,7 +14,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = DB::select('select * from cars');
+        $cars = DB::table('cars')->paginate(5);
         return view('index', ['cars' => $cars]);
     }
 
@@ -58,7 +58,8 @@ class CarController extends Controller
      */
     public function show($id)
     {
-        //
+        $cars = DB::select('select * from cars where id=?',[$id]);
+        return view('show', ['cars' => $cars]);
     }
 
     /**
