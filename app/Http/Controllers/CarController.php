@@ -41,8 +41,7 @@ class CarController extends Controller
         $Cust_name = $request->get('Cust_Name');
         $Cust_adr = $request->get('Cust_Adr');
         $Cust_tele = $request->get('Cust_Tele');
-        $Car_mileage = $request->get('Car_Mileage');
-        $cars = DB::insert('insert into cars(Car_reg_no, Car_Maker, Cust_Name, Cust_Adr, Cust_Tele, Car_Mileage) value(?,?,?,?,?,?)', [$Car_reg_no, $Car_maker, $Cust_name, $Cust_adr, $Cust_tele, $Car_mileage] );
+        $cars = DB::insert('insert into cars(Car_reg_no, Car_Maker, Cust_Name, Cust_Adr, Cust_Tele) value(?,?,?,?,?)', [$Car_reg_no, $Car_maker, $Cust_name, $Cust_adr, $Cust_tele] );
         if($cars){
             $red = redirect('cars')->with('success', 'Car has been added');
         }else{

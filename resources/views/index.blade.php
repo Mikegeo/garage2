@@ -18,25 +18,21 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>No</th>
             <th>Car Registration Number</th>
             <th>Car's Make</th>
             <th>Customer's Name</th>
             <th>Customer's Address</th>
             <th>Customer's Telephone</th>
-            <th>Car's Mileage</th>
         </tr>
     </thead>
     <tbody>
     @foreach($cars as $car)
     <tr>
-        <td>{{ $car->id }}</td>
         <td>{{ $car->Car_reg_no }}</td>
         <td>{{ $car->Car_Maker }}</td>
         <td>{{ $car->Cust_Name}}</td>
         <td>{{ $car->Cust_Adr}}</td>
         <td>{{ $car->Cust_Tele}}</td>
-        <td>{{ $car->Car_Mileage}}</td>
         <td>
             <form action="{{ action ('CarController@destroy', $car->id) }} " method="post">
                 <a href="{{ action ('CarController@show', $car->id) }}" class="btn btn-info">Show</a>

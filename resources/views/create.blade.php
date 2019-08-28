@@ -36,10 +36,6 @@
                 <label>Customer's Telephone</label>
                 <input type="text" name="Cust_Tele" placeholder="Customer's Telephone"/>
             </div>
-            <div class="form-group">
-                <label>Car Mileage</label> 
-                <input type="text" name="Car_Mileage" placeholder="Car Mileage"/>
-            </div>
             <button class="btn btn-primary" type="submit">Submit</button>
             </form>
           </div>  

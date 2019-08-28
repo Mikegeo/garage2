@@ -20,7 +20,6 @@ class CreateCarsTable extends Migration
             $table->string('Cust_Name');
             $table->string('Cust_Adr');
             $table->string('Cust_Tele');
-            $table->string('Car_Mileage');
             $table->timestamps();
         });
     }
