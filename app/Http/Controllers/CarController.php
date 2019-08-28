@@ -28,6 +28,13 @@ class CarController extends Controller
         return view('create');
     }
 
+
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $cars = DB::table('cars')->where('Car_reg_no', 'like', '%'.$search.'%')->paginate(5);
+        return view('index', ['cars' => $cars]);
+    }
     /**
      * Store a newly created resource in storage.
      *

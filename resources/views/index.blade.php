@@ -14,6 +14,16 @@
     <div class="col-md-8">
         <a href="{{ action('CarController@create') }}" class="btn btn-primary"> Add Car</a>
     </div>
+    <div class="col-md-4">
+        <form action="/search" method="get">
+            <div class="input-group">
+                <input type="search" name="search" class="form-control">
+                <span class="input-group-prepend">
+                   <button type="submit" class="btn btn-primary">Search</button> 
+                </span>  
+            </div>
+        </form>
+    </div>
 </div>
 <table class="table table-bordered">
     <thead>
