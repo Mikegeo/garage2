@@ -22,3 +22,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/cars', 'CarController@index');
 Route::resource('cars', 'CarController');
 Route::get('/search', 'CarController@search');
+
+Route::resource('jobs', 'JobController');
+Route::get('/cars/{car_id}/jobs', 'JobController@index');
+
+Route::post('cars/{car_id}/jobs', 'JobController@store');
